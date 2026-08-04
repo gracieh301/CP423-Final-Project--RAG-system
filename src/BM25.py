@@ -150,7 +150,7 @@ if __name__ == "__main__":
 
 
     # Test query
-    query = "Who is SpongeBob's best friend?"
+    query = "Which episode does spongebob discover fire?"
 
     results = retrieve(
         query,
