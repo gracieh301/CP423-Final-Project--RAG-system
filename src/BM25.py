@@ -7,9 +7,8 @@ from nltk.stem import PorterStemmer
 from rank_bm25 import BM25Okapi
 
 
-# -------------------------
+
 # Configuration
-# -------------------------
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 INPUT_FILE = PROJECT_ROOT / "data" / "processed_corpus.json"
@@ -19,9 +18,9 @@ TOP_K = 5
 
 
 
-# -------------------------
+
 # BM25 preprocessing
-# -------------------------
+
 
 stemmer = PorterStemmer()
 stop_words = set(stopwords.words("english"))
@@ -47,9 +46,9 @@ def tokenize(text):
     return tokens
 
 
-# -------------------------
-# Load corpus
-# -------------------------
+
+#Load corpus
+
 
 def load_corpus():
 
@@ -59,9 +58,9 @@ def load_corpus():
     return corpus["documents"]
 
 
-# -------------------------
-# Build BM25 index
-# -------------------------
+
+#Build BM25 index
+
 
 def build_bm25(documents):
 
@@ -97,9 +96,9 @@ def build_bm25(documents):
 
 
 
-# -------------------------
+
 # Retrieval
-# -------------------------
+
 
 def retrieve(query, bm25, documents, top_k=TOP_K):
 
@@ -140,9 +139,9 @@ def retrieve(query, bm25, documents, top_k=TOP_K):
 
 
 
-# -------------------------
+
 # Main test
-# -------------------------
+
 
 if __name__ == "__main__":
 

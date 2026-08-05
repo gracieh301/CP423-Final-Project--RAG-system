@@ -1,7 +1,3 @@
-"""
-Analyze spongebob_corpus.json — counts total/unique documents,
-broken down by type (episode vs character).
-"""
 
 import json
 from pathlib import Path
@@ -9,8 +5,7 @@ from collections import Counter
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CORPUS_FILE = PROJECT_ROOT / "data" / "spongebob_corpus.json"
-# If your file lives elsewhere, just point CORPUS_FILE at it directly, e.g.:
-# CORPUS_FILE = Path("/full/path/to/spongebob_corpus.json")
+
 
 
 def main():
@@ -24,12 +19,11 @@ def main():
     documents = corpus.get("documents", [])
     total_docs = len(documents)
 
-    # Uniqueness by id (should always be unique if crawler worked correctly)
+   
     ids = [doc["id"] for doc in documents]
     unique_ids = set(ids)
 
-    # Uniqueness by title (catches cases where the same page was crawled
-    # twice under different IDs -- shouldn't happen, but worth checking)
+ 
     titles = [doc["title"] for doc in documents]
     unique_titles = set(titles)
 
@@ -47,7 +41,7 @@ def main():
     for doc_type, count in type_counts.items():
         print(f"  {doc_type:<12} {count}")
 
-    # Flag any problems
+    
     if len(unique_ids) != total_docs:
         dupe_ids = [id_ for id_, count in Counter(ids).items() if count > 1]
         print(f"\n[!] WARNING: {total_docs - len(unique_ids)} duplicate ID(s) found: {dupe_ids}")
