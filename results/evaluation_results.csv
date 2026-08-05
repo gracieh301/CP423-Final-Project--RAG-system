@@ -1,0 +1,62 @@
+Question,Ground Truth,Expected Refusal,LLM Only,BM25+LLM,BM25 Top Chunk,BM25 Hit,BM25 Precision,BM25 Recall,BM25 RR,BM25 Refusal Correct,Dense+LLM,Dense Top Chunk,Dense Hit,Dense Precision,Dense Recall,Dense RR,Dense Refusal Correct
+Who is Spongebob Squarepants?,"SpongeBob SquarePants is a sea sponge character. He is a childish, joyful, hardworking, silly, and a bubbly sea sponge who lives in a pineapple with his pet snail, Gary in the underwater city of Bikini Bottom. ",False,"SpongeBob SquarePants!
+
+SpongeBob SquarePants is a beloved American animated television series created by marine biologist and animator Stephen Hillenburg. The show premiered in 1999 and has since become a global phenomenon, entertaining audiences of all ages.
+
+The series follows the adventures of SpongeBob, a optimistic, enthusiastic, and lovable sea sponge who lives in a pineapple under the sea in the fictional town of Bikini Bottom. He is best friends with Patrick Star, a dimwitted yet good-hearted starfish, and works as a fry cook at the Krusty Krab restaurant, owned by Mr. Krabs.
+
+SpongeBob's innocence, kindness, and determination often lead him into absurd and humorous situations, which are frequently exacerbated by his bossy and miserly employer, Mr. Krabs. The show also features a cast of colorful characters, including Sandy Cheeks, a smart and athletic squirrel who lives in a treedome; Squidward Tentacles, a grumpy octopus who is SpongeBob's neighbor and coworker; and Plankton, the owner of the Chum Bucket restaurant, who constantly tries to steal the secret formula for the Krusty Krab's popular sandwich, the Krabby Patty.
+
+Throughout its many seasons, SpongeBob SquarePants has become known for its witty humor, memorable characters, and catchy theme song. The show has won numerous awards, including multiple Emmy Awards, and has been broadcast in over 200 countries worldwide. It is","SpongeBob SquarePants [CHAR3_055] is the title character of the show, and he is described as a yellow square-shaped sponge who has a large sloping forehead and a large ape-like mouth with a notable overbite.",CHAR3_059,1.0,0.2,1.0,1.0,1.0,"SpongeBob SquarePants is a sea sponge character. [CHAR3_001] He is a childish, joyful, hardworking, silly, and a bubbly sea sponge who lives in a pineapple with his pet snail, Gary in the underwater city of Bikini Bottom. [CHAR3_004]",CHAR3_001,1.0,0.2,1.0,1.0,1.0
+What is Squidward Tentacles?,Squidward Tentacles is an octopus and the grumpy neighbor of SpongeBob SquarePants .,False,"Squidward Tentacles! He's a beloved character from the popular animated television series ""SpongeBob SquarePants."" Squidward is a grumpy, sarcastic, and artistic octopus (not squid, despite his name) who lives in a neighboring moai statue in Bikini Bottom.
+
+He's known for his disdain towards his neighbor SpongeBob SquarePants and his job as a cashier at the Krusty Krab restaurant. Despite this, Squidward has a soft spot for music and art, often expressing himself through clarinet playing and painting.
+
+Squidward is often portrayed as the show's straight man to SpongeBob's antics, providing comedic relief with his exasperated reactions to SpongeBob's enthusiasm and chaos. His dry wit and sarcasm have made him a fan favorite among audiences of all ages!",Squidward Tentacles is an octopus. [CHAR13_001],CHAR13_001,1.0,0.2,1.0,1.0,1.0,"Squidward Tentacles is an octopus and the grumpy neighbor of SpongeBob SquarePants [CHAR13_004]. He has a long family history linked to royalty, dating back to prehistoric times [CHAR373_002].",CHAR13_004,1.0,0.2,1.0,1.0,1.0
+Who won the race in the episode “The Great Snail Race”,"Rocky, Patrick's pet rock, won the race. ",False,"I'm not aware of any specific information about an episode called ""The Great Snail Race"" from a TV show or movie. Could you please provide more context or clarify which show or series this is from? I'll do my best to help you find the answer!","Rocky, Patrick's pet rock, won the snail race despite not showing any signs of sentience. [CHAR597_001]",S03E11_004,1.0,0.2,1.0,1.0,1.0,"Rocky, Patrick's pet rock, won the race. [S03E11_002]",S03E11_001,1.0,0.2,1.0,1.0,1.0
+Which Characters appear in the episode titled “Bubblestand”?,"SpongeBob SquarePants,Squidward Tentacles,Patrick Star,Duck bubble (debut),Caterpillar bubble (debut),Elephant bubble (debut),Butterfly bubble (debut)",False,"The episode ""Bubblestand"" is from the animated TV series ""SpongeBob SquarePants."" In this episode, Squidward becomes obsessed with a bubble stand that he finds on the beach. The main characters who appear in this episode are:
+
+1. SpongeBob SquarePants
+2. Patrick Star
+3. Squidward Tentacles
+
+These three characters play significant roles in the storyline of ""Bubblestand.""","[S07E07_003]
+
+The characters who appear in the episode titled ""Bubblestand"" are:
+
+* SpongeBob's blue brain with the earworm (note: this is not a character in the classical sense, but rather an object)
+* Gary
+* Mr. Krabs
+* Sandy",S07E07_003,1.0,0.2,1.0,0.2,1.0,I don't know.,S01E03_008,1.0,0.2,1.0,1.0,1.0
+In which episode does Spongebob get his boating license”?,Out of Scope,True,"SpongeBob SquarePants gets his boating license in the episode ""Boating School"" (Season 1, Episode 15a).","[S04E07_005] [CHAR452_001]
+
+This episode proves once again that Patrick knows the rules of the road. The other episode was "" Boating School ."" The Bass Blaster 3000 boat Patrick won in this episode is also a boat that can be driven in the SpongeBob SquarePants video game SpongeBob's Boating Bash .",S04E07_005,,,,,0.0,I don't know.,S04E07_006,,,,,0.0
+What happens in the episode titled “Bitter Groans and Gardens?”,Out of Scope,True,"I couldn't find any information on an episode titled ""Bitter Groans and Gardens."" It's possible that this is a lesser-known or obscure episode, or it may be a title from a specific TV show or movie that I don't have access to.
+
+Could you please provide more context or clarify which TV show or series this episode belongs to? I'll do my best to help you find the answer.","In the episode ""Bitter Groans and Gardens,"" [CHAR501_002], she appears as one of the three garden judges.",CHAR501_001,,,,,0.0,I don't know.,CHAR1536_002,,,,,0.0
+What is the name of the episode where Squidward and Spongebob team up because they think Mr. Krabs is a robot?,The episode is titled “Krab Borg”,False,"The episode you're referring to is called ""Squid's Day Off"" (Season 2, Episode 15a), but more specifically, it's in the episode ""Squid's Day Off"" that Squidward and SpongeBob team up because they think Mr. Krabs is a robot.
+
+However, another episode where Squidward and SpongeBob team up is called ""Squid's Visit"" (Season 2, Episode 15b), but it's not exactly about thinking Mr. Krabs is a robot.
+
+But the most notable one that comes to mind is in the episode ""Squid's Day Off"" isn't the only one where Squidward and SpongeBob team up because they think Mr. Krabs is a robot, another episode is called ""Squilliam Returns"" (Season 3, Episode 15a), but it's not exactly about thinking Mr. Krabs is a robot.
+
+However, I found that there isn't an episode where Squidward and SpongeBob team up because they think Mr. Krabs is a robot",I don't know.,CHAR23_028,1.0,0.2,1.0,0.5,1.0,I don't know.,S03E15_004,1.0,0.2,1.0,1.0,1.0
+What is the synopsis of the episode where “Larry the Lobster” first appears?,"The episode is titled “Ripped” pants, the synopsis is spongebob turned into a clown when big larry tried to put him down.",False,"I'm not familiar with a specific episode featuring ""Larry the Lobster."" Could you provide more context or information about the show or series you're referring to? I'd be happy to try and help you find the answer.","According to [CHAR169_001], Larry the Lobster first appears in the episode ""Ripped Pants"".",CHAR169_001,1.0,0.2,0.5,1.0,1.0,"According to [CHAR169_001], Larry the Lobster first appears in the episode ""Ripped Pants"".",CHAR169_011,1.0,0.2,0.5,1.0,1.0
+What is the plot of the episode where Patrick punches spongebob?,The episode is titled “No Weenies Allowed”. In the episode spongebob tries to get into the Salty Spitoon but is denied entry because he is a weenie. Patrick punches spongebob in the face.,False,"I'm not aware of any specific episode in SpongeBob SquarePants where Patrick punches SpongeBob. It's possible that you may be thinking of a different episode or scene, or maybe even a fan-made creation.
+
+However, I can suggest some popular episodes where Patrick and SpongeBob have a physical altercation:
+
+* ""Band Geeks"" (Season 2, Episode 15): In this episode, Squidward is forced to lead the Bubble Bowl marching band, and Patrick and SpongeBob get into a fight with Squidward.
+* ""F.U.N."" (Season 1, Episode 13): While not exactly a physical altercation, SpongeBob and Patrick do have a disagreement that leads to some comedic moments.
+
+If you can provide more context or details about the episode you're thinking of, I'd be happy to try and help you identify it.","[CHAR4_010] The plot of the episode where Patrick punches SpongeBob involves a carnival in response to not receiving a present from SpongeBob, and includes actions such as ripping off the heart man's costume, attempting to destroy the Heart-a-Whirl, stealing a little girl's lollipop, and punching SpongeBob after being insulted by him.",CHAR4_010,0.0,0.0,0.0,0.0,1.0,I don't know.,S03E25_003,1.0,0.2,1.0,1.0,1.0
+What is the Krabby Patty secret formula?,Out of Scope,True,"The infamous Krabby Patty secret formula! Unfortunately, I don't have any inside information or access to the actual formula, as it's a closely guarded trade secret known only to Mr. Krabs and possibly a select few in the SpongeBob SquarePants universe.
+
+However, I can tell you that the formula has been the subject of much speculation and parody over the years. Many fans have attempted to reverse-engineer or guess the ingredients, but none have ever been able to crack the code.
+
+If you're interested, I can provide some humorous or fictional takes on what the Krabby Patty secret formula might be, but keep in mind that these would just be creative interpretations and not actual information!",I don't know. [CHAR6_001],S07E39_001,,,,,0.0,I don't know. [S06E23_001],S06E23_007,,,,,0.0
+What is the plot of the episode where Mystery the Seahorse makes her first appearance?,"The episode is titled “My Pretty Seahorse”. In this episode, Spongebob gets a seahorse named Mystery and takes care of it.",False,I don't have specific information on an episode featuring a character named Mystery the Seahorse. Could you provide more context or details about the show or series this character appears in? I'll do my best to help you find the answer.,"[MATCHING_001]
+
+According to [CHAR643_001], Mystery the Seahorse first appears in the episode ""My Pretty Seahorse."" In this episode, SpongeBob finds Mystery eating his crops and wants to have her as a pet. He tames her and the two become friends, doing many things together. However, Mr. Krabs does not like Mystery and wants SpongeBob to let her go, leading to a chase after she eats various items in the Krusty Krab.",CHAR643_001,1.0,0.2,0.5,1.0,1.0,"[M03E22_001]
+
+The plot of the episode where Mystery the Seahorse makes her first appearance is that SpongeBob finds Mystery eating his crops, and he wants to have her as a pet. He tames her and the two become friends, doing many things together. However, Mr. Krabs does not like Mystery and wants SpongeBob to let her go.",CHAR643_001,1.0,0.4,1.0,1.0,1.0

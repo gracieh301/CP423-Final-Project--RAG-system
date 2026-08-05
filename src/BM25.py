@@ -1,6 +1,7 @@
 import json
 import re
 
+from pathlib import Path
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from rank_bm25 import BM25Okapi
@@ -10,9 +11,12 @@ from rank_bm25 import BM25Okapi
 # Configuration
 # -------------------------
 
-INPUT_FILE = "data/processed_corpus.json"
-
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+INPUT_FILE = PROJECT_ROOT / "data" / "processed_corpus.json"
+ 
 TOP_K = 5
+
+
 
 
 # -------------------------
