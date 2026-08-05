@@ -101,9 +101,9 @@ def chunk_document(text):
     return chunks
 
 
-# -------------------------
+
 # Main preprocessing
-# -------------------------
+
 if __name__ == "__main__":
 
     # Load corpus

@@ -1,6 +1,6 @@
 # CP423-Final-Project--RAG-system
 
-A Retrieval-Augmented Generation (RAG) system built for course CP423. This project explores and compares two information retrieval approaches for answering questions over a custom SpongeBob SquarePants knowledge corpus:
+A Retrieval-Augmented Generation (RAG) system built for "Text retrieval and Search engines" course at Wilfrid Laurier University. This project explores and compares two information retrieval approaches for answering questions over a custom SpongeBob SquarePants knowledge corpus:
 
 - **BM25** sparse lexical retrieval
 - **Dense Retrieval** semantic retrieval using Sentence Transformers

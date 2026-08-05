@@ -5,11 +5,11 @@ import numpy as np
 from sentence_transformers import SentenceTransformer, util
 
 
-# -------------------------
-# Configuration
-# -------------------------
 
-# Resolve relative to THIS FILE, not the current working directory --
+# Configuration
+
+
+# Resolve relative to THIS FILE, not the current working directory
 # so this works whether you run the script from src/, the project root,
 # or anywhere else.
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -23,9 +23,9 @@ MODEL_NAME = "all-MiniLM-L6-v2"
 EMBEDDINGS_CACHE_FILE = PROJECT_ROOT / "data" / "embeddings_cache.npy"
 
 
-# -------------------------
+
 # Load corpus
-# -------------------------
+
 
 def load_corpus():
 
@@ -35,9 +35,9 @@ def load_corpus():
     return corpus["documents"]
 
 
-# -------------------------
+
 # Build dense index
-# -------------------------
+
 
 def build_dense_index(documents, model_name=MODEL_NAME, cache_file=EMBEDDINGS_CACHE_FILE):
 
@@ -64,9 +64,7 @@ def build_dense_index(documents, model_name=MODEL_NAME, cache_file=EMBEDDINGS_CA
 
     print("Embedding documents...")
 
-    # No tokenizing/stemming/stopword removal here -- the embedding model
-    # wants natural, unmodified text. We still repeat the title to boost
-    # its weight in the combined text, same idea as the BM25 version.
+    # different from BM25, less preprocessing
     texts_for_embedding = [
         doc["title"] + ". " + doc["title"] + ". " + doc["text"]
         for doc in documents
@@ -90,9 +88,9 @@ def build_dense_index(documents, model_name=MODEL_NAME, cache_file=EMBEDDINGS_CA
     return model, embeddings
 
 
-# -------------------------
+
 # Retrieval
-# -------------------------
+
 
 def retrieve(query, model, embeddings, documents, top_k=TOP_K):
 
@@ -130,9 +128,8 @@ def retrieve(query, model, embeddings, documents, top_k=TOP_K):
     return results
 
 
-# -------------------------
+
 # Main test
-# -------------------------
 
 if __name__ == "__main__":
 
