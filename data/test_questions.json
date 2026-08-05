@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Who is Spongebob Squarepants?",
+    "ground_truth": "SpongeBob SquarePants is a sea sponge character. He is a childish, joyful, hardworking, silly, and a bubbly sea sponge who lives in a pineapple with his pet snail, Gary in the underwater city of Bikini Bottom. ",
+    "relevant_doc_ids": ["CHAR3"],
+    "expected_refusal": false
+  },
+  {
+    "question": "What is Squidward Tentacles?",
+    "ground_truth": "Squidward Tentacles is an octopus and the grumpy neighbor of SpongeBob SquarePants .",
+    "relevant_doc_ids": ["CHAR13"],
+    "expected_refusal": false
+  },
+  {
+    "question": "Who won the race in the episode “The Great Snail Race”",
+    "ground_truth": "Rocky, Patrick's pet rock, won the race. ",
+    "relevant_doc_ids": ["S03E11"],
+    "expected_refusal": false
+  },
+  {
+    "question": "Which Characters appear in the episode titled “Bubblestand”?",
+    "ground_truth": "SpongeBob SquarePants,Squidward Tentacles,Patrick Star,Duck bubble (debut),Caterpillar bubble (debut),Elephant bubble (debut),Butterfly bubble (debut)",
+    "relevant_doc_ids": ["S01E03"],
+    "expected_refusal": false
+  },
+
+  {
+    "question": "In which episode does Spongebob get his boating license”?",
+    "ground_truth": "Out of Scope",
+    "relevant_doc_ids": [],
+    "expected_refusal": true
+  },
+
+  {
+    "question": "What happens in the episode titled “Bitter Groans and Gardens?”",
+    "ground_truth": "Out of Scope",
+    "relevant_doc_ids": [],
+    "expected_refusal": true
+  },
+  {
+    "question": "What is the name of the episode where Squidward and Spongebob team up because they think Mr. Krabs is a robot?",
+    "ground_truth": "The episode is titled “Krab Borg”",
+    "relevant_doc_ids": ["S03E15"],
+    "expected_refusal": false
+  },
+  {
+    "question": "What is the synopsis of the episode where “Larry the Lobster” first appears?",
+    "ground_truth": "The episode is titled “Ripped” pants, the synopsis is spongebob turned into a clown when big larry tried to put him down.",
+    "relevant_doc_ids": ["CHAR169", "S01E28"],
+    "expected_refusal": false
+  },
+  {
+    "question": "What is the plot of the episode where Patrick punches spongebob?",
+    "ground_truth": "The episode is titled “No Weenies Allowed”. In the episode spongebob tries to get into the Salty Spitoon but is denied entry because he is a weenie. Patrick punches spongebob in the face.",
+    "relevant_doc_ids": ["S03E25"],
+    "expected_refusal": false
+  },
+  {
+    "question": "What is the Krabby Patty secret formula?",
+    "ground_truth": "Out of Scope",
+    "relevant_doc_ids": [],
+    "expected_refusal": true
+  },
+  {
+    "question": "What is the plot of the episode where Mystery the Seahorse makes her first appearance?",
+    "ground_truth": "The episode is titled “My Pretty Seahorse”. In this episode, Spongebob gets a seahorse named Mystery and takes care of it.",
+    "relevant_doc_ids": ["CHAR643", "S03E22"],
+    "expected_refusal": false
+  }
+
+
+
+
+]

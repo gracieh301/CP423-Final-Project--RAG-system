@@ -10,6 +10,8 @@ TEMPERATURE = 0
 
 MAX_TOKENS = 300
 
+SEED = 42  # fixed seed so Ollama generations are reproducible run to run
+
 
 # -------------------------
 # Build prompt
@@ -32,7 +34,7 @@ def build_prompt(question, retrieved_chunks):
     prompt = f"""
 You are a Retrieval-Augmented Generation (RAG) assistant.
 
-Answer ONLY using the information contained in the provided context.
+Answer ONLY using the information contained in the provided context documents.
 
 Rules:
 
@@ -62,7 +64,7 @@ Answer
 
 
 # -------------------------
-# Generate answer
+# Generate answer (RAG: retrieval + LLM)
 # -------------------------
 
 def generate_answer(question, retrieved_chunks):
@@ -84,7 +86,56 @@ def generate_answer(question, retrieved_chunks):
 
             "temperature": TEMPERATURE,
 
-            "num_predict": MAX_TOKENS
+            "num_predict": MAX_TOKENS,
+
+            "seed": SEED
+
+        }
+
+    )
+
+    return response["message"]["content"]
+
+
+# -------------------------
+# Generate answer (LLM ONLY -- no retrieval, no context)
+# -------------------------
+
+def generate_plain_answer(question):
+    """
+    Baseline: ask the LLM the question directly, with no retrieved
+    context at all. Used to compare RAG vs. no-RAG performance.
+    """
+
+    prompt = f"""
+You are a helpful assistant. Answer the following question as best
+you can using your own knowledge.
+
+Question
+--------
+{question}
+
+Answer
+"""
+
+    response = ollama.chat(
+
+        model=MODEL_NAME,
+
+        messages=[
+            {
+                "role": "user",
+                "content": prompt.strip()
+            }
+        ],
+
+        options={
+
+            "temperature": TEMPERATURE,
+
+            "num_predict": MAX_TOKENS,
+
+            "seed": SEED
 
         }
 
@@ -129,6 +180,12 @@ if __name__ == "__main__":
 
     )
 
-    print("\nGenerated answer:\n")
+    print("\nGenerated answer (RAG):\n")
 
     print(answer)
+
+    plain_answer = generate_plain_answer(question)
+
+    print("\nGenerated answer (LLM only):\n")
+
+    print(plain_answer)

@@ -9,14 +9,18 @@ from sentence_transformers import SentenceTransformer, util
 # Configuration
 # -------------------------
 
-INPUT_FILE = "data/processed_corpus.json"
+# Resolve relative to THIS FILE, not the current working directory --
+# so this works whether you run the script from src/, the project root,
+# or anywhere else.
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+INPUT_FILE = PROJECT_ROOT / "data" / "processed_corpus.json"
 
 TOP_K = 5
 
 MODEL_NAME = "all-MiniLM-L6-v2"
 
 # Cached embeddings get saved here after the first run
-EMBEDDINGS_CACHE_FILE = "data/embeddings_cache.npy"
+EMBEDDINGS_CACHE_FILE = PROJECT_ROOT / "data" / "embeddings_cache.npy"
 
 
 # -------------------------
@@ -41,7 +45,7 @@ def build_dense_index(documents, model_name=MODEL_NAME, cache_file=EMBEDDINGS_CA
 
     model = SentenceTransformer(model_name)
 
-    cache_path = Path(cache_file)
+    cache_path = EMBEDDINGS_CACHE_FILE
 
     # If a cached embeddings file exists and matches the corpus size,
     # load it instead of re-embedding everything.
@@ -140,7 +144,7 @@ if __name__ == "__main__":
 
 
     # Test query
-    query = "Does squidward like his job?"
+    query = "Who is Mr. Krab's pet?"
 
     results = retrieve(
         query,
