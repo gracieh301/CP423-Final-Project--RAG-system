@@ -26,9 +26,7 @@ HEADERS = {
 REQUEST_DELAY = 0.3
 
 
-# ============================================================
-# HELPER FUNCTIONS
-# ============================================================
+
 
 def get_episode_pages(season):
     """Return a list of episode page titles for a given season, via the
@@ -125,7 +123,7 @@ def get_characters_from_episode(html):
     seen_pages = set()
 
     # find_all(a) here also picks up links nested inside the "Incidentals"
-    # sub-<ul> (e.g. Incidental 30, Incidental 30A) which is intentional --
+    # sub-<ul> (e.g. Incidental 30, Incidental 30A) which is intentional 
     # they get treated as their own character pages.
     for link in char_list.find_all("a", href=True):
         href = link["href"]
@@ -192,9 +190,9 @@ def create_episode_document(episode_id, title, html, characters):
     }
 
 
-# ============================================================
-# MAIN CRAWL
-# ============================================================
+
+# Main
+
 
 def crawl_spongebob():
 

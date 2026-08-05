@@ -1,8 +1,8 @@
 import ollama
 
-# -------------------------
+
 # Configuration
-# -------------------------
+
 
 MODEL_NAME = "llama3.2"
 
@@ -13,9 +13,9 @@ MAX_TOKENS = 300
 SEED = 42  # fixed seed so Ollama generations are reproducible run to run
 
 
-# -------------------------
+
 # Build prompt
-# -------------------------
+
 
 def build_prompt(question, retrieved_chunks):
     """
@@ -63,9 +63,9 @@ Answer
     return prompt.strip()
 
 
-# -------------------------
-# Generate answer (RAG: retrieval + LLM)
-# -------------------------
+
+# Generate answer (retrieval + LLM)
+
 
 def generate_answer(question, retrieved_chunks):
 
@@ -97,9 +97,9 @@ def generate_answer(question, retrieved_chunks):
     return response["message"]["content"]
 
 
-# -------------------------
-# Generate answer (LLM ONLY -- no retrieval, no context)
-# -------------------------
+
+# Generate answer (LLM ONLY)
+
 
 def generate_plain_answer(question):
     """
@@ -144,9 +144,9 @@ Answer
     return response["message"]["content"]
 
 
-# -------------------------
+
 # Example
-# -------------------------
+
 
 if __name__ == "__main__":
 

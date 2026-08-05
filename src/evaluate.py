@@ -2,11 +2,11 @@
 Evaluate — single command to reproduce all experimental results.
 
 Runs every test question through THREE pipelines:
-  1. LLM only          (no retrieval)
-  2. BM25 + LLM         (classical retrieval RAG)
-  3. Dense + LLM        (embedding retrieval RAG)
+  1. LLM only          
+  2. BM25 + LLM         
+  3. Dense + LLM       
 
-...and prints/saves a neat comparison table.
+
 
 Reproducibility:
   - random / numpy seeds fixed
@@ -16,8 +16,6 @@ Reproducibility:
 Usage (single command, reproduces everything with defaults):
     python evaluate.py
 
-Optional flags:
-    python evaluate.py --questions data/test_questions.json --top_k 5
 """
 
 import argparse
@@ -33,9 +31,7 @@ from BM25 import load_corpus, build_bm25, retrieve as bm25_retrieve
 import dense_retrieval as dense_module
 from generate import generate_answer, generate_plain_answer
 
-# -------------------------
-# Reproducibility
-# -------------------------
+
 
 SEED = 42
 random.seed(SEED)
@@ -48,11 +44,11 @@ except ImportError:
     pass
 
 
-# -------------------------
-# Configuration
-# -------------------------
 
-# Resolve paths relative to THIS FILE, not the current working directory --
+# Configuration
+
+
+# Resolve paths relative to THIS FILE, not the current working directory
 # this way `python evaluate.py` works the same whether run from the
 # project root, from src/, or with a full path, on any OS.
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -64,9 +60,9 @@ RESULTS_DIR = PROJECT_ROOT / "results"
 RESULTS_CSV = RESULTS_DIR / "evaluation_results.csv"
 
 
-# -------------------------
+
 # Retrieval metrics
-# -------------------------
+
 
 def hit_at_k(retrieved_ids, relevant_ids):
     """1 if ANY relevant document appears in the retrieved list, else 0."""
@@ -144,9 +140,9 @@ def is_abstention(answer):
     return is_refusal(answer)
 
 
-# -------------------------
+
 # Load test questions
-# -------------------------
+
 
 def load_test_questions(path):
     with open(path, encoding="utf-8") as f:
@@ -154,9 +150,9 @@ def load_test_questions(path):
     return data
 
 
-# -------------------------
+
 # Run one question through all 3 pipelines
-# -------------------------
+
 
 def run_question(question, bm25_index, dense_model, dense_embeddings, documents, top_k,
                   relevant_ids=None, expected_refusal=None):
@@ -187,9 +183,9 @@ def run_question(question, bm25_index, dense_model, dense_embeddings, documents,
     }
 
 
-# -------------------------
+
 # Main
-# -------------------------
+
 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate LLM-only vs BM25-RAG vs Dense-RAG")
